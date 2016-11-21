@@ -10,7 +10,8 @@ int     main(int argc, char **argv)
 	argv++;
     array = validate_array(argv, argc);
 	help = create_help(argc);
-	array = solve_stack(array, help, argc);
+	print_array(help);
+	solve_stack(&array, &help, argc);
 	finalize_stack(&array, &help);
 	free(array);
 	free(help);

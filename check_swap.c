@@ -2,7 +2,6 @@
 
 int		check_swap(int **array)
 {
-	int		temp;
 	int		*temp_array;
 
 	temp_array = *array;
