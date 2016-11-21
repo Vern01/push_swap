@@ -3,6 +3,6 @@
 void    send_instruction(char *s)
 {
     while (*s)
-        write(0, s++, 1);
-    write(0, "\n", 1);
+        write(1, s++, 1);
+    write(1, "\n", 1);
 }

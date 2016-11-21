@@ -7,8 +7,10 @@
 void    move_down_array(int **array)
 {
     int     size;
+    int     *temp_array;
 
-    size = array_size(*array);
+    temp_array = *array;
+    size = array_size(temp_array);
     while (--size > 0)
-        *array[size] = *array[size - 1];
+        temp_array[size] = temp_array[size - 1];
 }

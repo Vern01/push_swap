@@ -1,10 +1,14 @@
 #include "push_swap.h"
 
-void    ft_ra(int **array)
+int    ft_ra(int **array)
 {
     int     temp;
+    int     *temp_array;
 
-    temp = *array[0];
+    temp_array = *array;
+    temp = temp_array[0];
     move_up_array(array);
-    *array[array_size(*array)] = temp;
+    temp_array[array_size(temp_array)] = temp;
+    send_instruction("ra");
+    return (temp_array[0]);
 }

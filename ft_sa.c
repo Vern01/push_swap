@@ -2,12 +2,14 @@
 
 void	ft_sa(int **array)
 {
-	int	temp;
+	int		temp;
+	int		*temp_array;
 
-	if (array_size(*array) < 2)
+	temp_array = *array;
+	if (array_size(temp_array) < 2)
 		return ;
-	temp = *array[0];
-	*array[0] = *array[1];
-	*array[1] = temp;
+	temp = temp_array[0];
+	temp_array[0] = temp_array[1];
+	temp_array[1] = temp;
 	send_instruction("sa");
 }

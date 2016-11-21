@@ -32,6 +32,14 @@ int		*sort(int *array, int size)
 
 int     *check_duplicate(int *array, int size)
 {
-    array = sort(array, size - 1);
-    return (array);
+	int		*sorted;
+	int		count;
+
+	if (!(sorted = (int *)malloc(sizeof(int) * size)))
+		exit_msg("Malloc error: check_duplicate.c");
+	count = -1;
+	while (++count < size)
+		sorted[count] = array[count];
+    sorted = sort(sorted, size - 1);
+    return (sorted);
 }
