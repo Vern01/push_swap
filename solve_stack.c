@@ -4,7 +4,7 @@ void	solve_stack(int **array, int **help, int size)
 {
 	while (1)
 	{
-		if (stack_ordered(array))		
+		if (stack_ordered(array))
 			return ;
 		while (!stack_ordered(array))
 		{

@@ -8,7 +8,7 @@ move_down_array.o move_up_array.o push_to_array.o \
 send_instruction.o simplify_array.o to_number.o validate_array.o \
 check_smallest.o check_swap.o create_help.o get_min.o rotate_stack.o \
 solve_stack.o stack_ordered.o print_array.o is_lower_half.o \
-finalize_stack.o
+finalize_stack.o get_max.o
 
 $(NAME): $(OBJ)
 		$(CCFLAGS) -o $(NAME) main.c $(OBJ)

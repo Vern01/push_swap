@@ -1,18 +1,5 @@
 #include "push_swap.h"
 
-int		get_max(int *array)
-{
-	int		max;
-	int		i;
-
-	max = array[0];
-	i = 0;
-	while (array[++i])
-		if (array[i] > max)
-			max = array[i];
-	return (max);
-}
-
 void	outer_swap(int **array)
 {
 	ft_ra(array);
@@ -35,7 +22,7 @@ int		stack_ordered(int **array)
 			return (0);
 		i++;
 	}
-	if (temp_array[0] < temp_array[array_size(temp_array) - 1] && temp_array[0] != get_min(temp_array))
+	if (temp_array[0] < temp_array[array_size(temp_array) - 1] && (temp_array[0] != get_min(temp_array)))
 		outer_swap(array);
 	return (1);
 }

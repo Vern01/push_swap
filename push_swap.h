@@ -15,6 +15,7 @@ void    ft_pb(int **a, int **b);
 int		ft_ra(int **array);
 int		ft_rra(int **array);
 void	ft_sa(int **array);
+int		get_max(int *array);
 int		get_min(int *array);
 int		is_lower_half(int *array, int size);
 int		is_number(char *s);
